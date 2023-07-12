@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
+    width: 50%;
 }
 
 .square_box {
@@ -10,5 +11,5 @@
     align-items: center;
     justify-content: center;
     border: 1px solid black;
-    flex-basis: calc(100% / 5);
+    flex-basis: calc(100% / 10);
 }
