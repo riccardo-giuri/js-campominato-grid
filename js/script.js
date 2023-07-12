@@ -1,3 +1,5 @@
+"use strict";
+
 const newGameBtn = document.querySelector("#newGame_btn");
 const modeSelect = document.querySelector("#modeSelect");
 const gridContainer = document.querySelector(".square_container");
@@ -32,7 +34,7 @@ function startNewGame() {
 
 function createGrid(cellNumber) {
     const newGrid = [];
-    rowCellCount = Math.sqrt(cellNumber);
+    const rowCellCount = Math.sqrt(cellNumber);
 
     for(let i = 0; i < cellNumber; i++) {
         const newCell = createCell((i + 1).toString(), rowCellCount);
@@ -48,7 +50,7 @@ function createCell(cellContent, cellPerRow) {
 
     cell.classList.add("square_box");
     cell.textContent = cellContent;
-    cell.style.flexBasis = `"calc(100% / ${cellPerRow})"`;
+    cell.style.flexBasis = `calc(100% / ${cellPerRow})`
 
     return cell;
 }
